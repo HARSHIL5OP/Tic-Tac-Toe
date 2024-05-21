@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+
+   height: 8vh; 
+   width: 100vw;
+   background-color: black;
+   color: white;
+   font-size: 5vh;
+    /* padding: 0vh 2vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gamecontainer{
+    width: 90%;
+    /* background-color: yellow; */
+    margin: 3vw auto;
+    /* margin-top: 5vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+}
+
+.container{
+    width: 50%;
+    display: grid;
+    grid-template-rows: repeat(3,12vw);
+    grid-template-columns: repeat(3,12vw);
+    /* width: 60%; */
+    position: relative;
+}
+
+.container #line{
+    position: absolute;
+    left: 2vw;
+    width: 0vw;
+    transition: width 1s ease-in-out;
+    border: 2px solid black;
+    border-radius: 5vw;
+    background-color: red;
+    height: 2vh;
+    transform: translate(1vw);
+    opacity: 0.5;
+    visibility: hidden;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.4vw solid black;
+    font-size: 7vw;
+    
+}
+
+.box:hover{
+    background-color: aliceblue;
+}
+
+.bt{
+    border-top: none;
+    
+}
+.bb{
+    border-bottom: none;
+
+}
+.bl{
+    border-left: none;
+
+}
+.br{
+    border-right: none;
+
+}
+
+.infobox{
+    width: 50%;
+    padding: 2vw;
+    /* background-color: blue; */
+}
+.infobox .title{
+    font-size: 3vw;
+}
+.infobox #turn{
+    font-size: 3.5vw;
+    font-weight: bold;
+}
+
+.infobox #image img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+button{
+    width: 15vw;
+    padding: 0.3vw;
+    font-size: 2.5vw;
+    background-color: brown;
+    color: white;
+    border-radius: 5vw;
+    margin: 1vh;
+    border: none;
+}
+button:hover{
+    background-color: rgba(194, 71, 71, 0.993);
+}
+
+@media only screen and (max-width: 850px) {
+    .container {
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+
+
+    .gamecontainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container #line{
+        display: none;
+    }
+
+    .box{
+        font-size: 10vw;
+    }
+    
+    .infobox{
+       
+        padding: 6vw;
+       
+    }
+    .infobox .title{
+        font-size: 9vw;
+    }
+    .infobox #turn{
+        font-size: 9.5vw;
+        font-weight: bold;
+    }
+    
+    .infobox #image img{
+        width: 0;
+        transition: width 1s ease-in-out;
+    }
+
+    button{
+        width: 35vw;
+        padding: 0.9vw;
+        font-size: 7.5vw;
+       
+        border-radius: 8vw;
+        margin: 2vh;
+       
+    }
+    
+  }
